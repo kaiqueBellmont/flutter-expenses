@@ -21,14 +21,18 @@ class MyHomePage extends StatelessWidget {
         title: const Text('Despesas Pessoais'),
       ),
       body: const Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           SizedBox(
             width: double.infinity,
+            height: 70,
             child: Card(
               color: Colors.cyanAccent,
               elevation: 5,
-              child: Text('Gráfico'),
+              child: Center(
+                child: Text('Gráfico'),
+              ),
             ),
           ),
           Card(
