@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/transaction.dart';
 import 'package:intl/intl.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
@@ -15,18 +14,17 @@ class TransactionList extends StatelessWidget {
       child: transactions.isEmpty
           ? Column(
               children: [
+                const SizedBox(height: 20),
                 Text(
                   'Nenhuma Transação Cadastrada!',
                   style: Theme.of(context).textTheme.headline6,
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 SizedBox(
-                  height: 250,
-                  child: SvgPicture.asset(
-                    'lib/assets/images/waiting.svg',
-                    fit: BoxFit.contain,
+                  height: 200,
+                  child: Image.asset(
+                    'lib/assets/images/waiting.png',
+                    fit: BoxFit.cover,
                   ),
                 ),
               ],
