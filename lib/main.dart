@@ -1,7 +1,6 @@
 import 'dart:math';
 import 'dart:io';
 
-import 'package:expenses/components/transaction_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -110,8 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
     bool isLandscape = mediaQuery.orientation == Orientation.landscape;
 
     final iconList = Platform.isIOS ? CupertinoIcons.refresh : Icons.list;
-    final chartList =
-        Platform.isIOS ? CupertinoIcons.refresh : Icons.show_chart;
+    final chartList = Platform.isIOS ? CupertinoIcons.refresh : Icons.show_chart;
 
     final actions = [
       if (isLandscape)
@@ -134,9 +132,8 @@ class _MyHomePageState extends State<MyHomePage> {
       actions: actions,
     );
 
-    final availableHeight = mediaQuery.size.height -
-        appBar.preferredSize.height -
-        mediaQuery.padding.top;
+    final availableHeight =
+        mediaQuery.size.height - appBar.preferredSize.height - mediaQuery.padding.top;
 
     final bodyPage = SafeArea(
       child: SingleChildScrollView(
@@ -194,8 +191,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: const Icon(Icons.add),
                     onPressed: () => _openTransactionFormModal(context),
                   ),
-            floatingActionButtonLocation:
-                FloatingActionButtonLocation.centerFloat,
+            floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
           );
   }
 }
